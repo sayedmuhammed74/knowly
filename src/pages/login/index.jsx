@@ -42,14 +42,14 @@ const Login = () => {
           <div className="flex items-center justify-between px-2">
             <p className="text-sm text-primary">Remind me next time</p>
             <div
-              className={`w-9 h-4 rounded-full relative border-primary border-2 cursor-pointer transition-all duration-100 ease-in ${
+              className={`w-9 h-4 rounded-full flex items-center border-primary border-2 cursor-pointer transition-all duration-100 ease-in ${
                 remindMe ? 'bg-white' : 'bg-primary'
               }`}
               onClick={() => setRemindMe((prev) => !prev)}
             >
               <div
-                className={`h-4 w-4 rounded-full absolute top-[-2.5] transition-all duration-200 ease-in ${
-                  remindMe ? 'bg-primary' : 'translate-x-4 bg-white'
+                className={`h-4 w-4 rounded-full transition-all duration-200 ease-in ${
+                  remindMe ? 'bg-primary' : 'translate-x-[100%] bg-white'
                 }`}
               ></div>
             </div>
