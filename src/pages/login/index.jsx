@@ -14,7 +14,7 @@ const Login = () => {
   return (
     <div className="flex justify-center items-center">
       <div className="container md:flex-row md:items-center md:h-[100vh]">
-        <div className="md:w-3/4">
+        <div className="md:w-3/4 bg-red-500">
           <Image
             src={LoginPageImage}
             alt="Login"
@@ -22,7 +22,7 @@ const Login = () => {
           />
         </div>
         <form className="container">
-          <h1 className="font-bold text-2xl mt-5 text-[#33424a]">Login</h1>
+          <h1 className="font-bold text-2xl text-[#33424a]">Login</h1>
           <p className="px-2 mt-2 mb-3 text-sm text-gray-500">
             Please sign in to continue
           </p>
