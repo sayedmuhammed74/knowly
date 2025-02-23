@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 
 // Images & Icons
@@ -5,8 +7,10 @@ import LoginPageImage from './../../../public/login/login.jpg';
 import UsernameIcon from './../../../public/login/user.svg';
 import LockIcon from './../../../public/login/lock.svg';
 import PhoneIcon from './../../../public/login/phone.svg';
+import { useState } from 'react';
 
 const Signup = () => {
+  const [remindMe, setRemindMe] = useState(false);
   return (
     <div className="flex justify-center items-center">
       <div className="container md:flex-row md:items-center md:h-[100vh]">
@@ -40,11 +44,20 @@ const Signup = () => {
           </div>
           <button className="btn">Sign Up</button>
           <div className="flex items-center justify-between px-2">
-            <p className="text-sm font-semibold text-primary">
+            <p className="text-sm font-light text-primary">
               Remind me next time
             </p>
-            <div className="w-9 h-4 rounded-full relative bg-white border-primary border-2 cursor-pointer">
-              <div className="h-5 w-4 bg-primary rounded-full absolute top-[-4]"></div>
+            <div
+              className={`w-9 h-4 rounded-full relative border-primary border-2 cursor-pointer transition-all duration-100 ease-in ${
+                remindMe ? 'bg-white' : 'bg-primary'
+              }`}
+              onClick={() => setRemindMe((prev) => !prev)}
+            >
+              <div
+                className={`h-4 w-4 rounded-full absolute top-[-2.5] transition-all duration-200 ease-in ${
+                  remindMe ? 'bg-primary' : 'translate-x-4 bg-white'
+                }`}
+              ></div>
             </div>
           </div>
         </form>
