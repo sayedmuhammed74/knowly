@@ -43,13 +43,13 @@ const Login = () => {
             <p className="text-sm text-primary">Remind me next time</p>
             <div
               className={`w-9 h-4 rounded-full flex items-center border-primary border-2 cursor-pointer transition-all duration-100 ease-in ${
-                remindMe ? 'bg-white' : 'bg-primary'
+                !remindMe ? 'bg-white' : 'bg-primary'
               }`}
               onClick={() => setRemindMe((prev) => !prev)}
             >
               <div
                 className={`h-4 w-4 rounded-full transition-all duration-200 ease-in ${
-                  remindMe ? 'bg-primary' : 'translate-x-[100%] bg-white'
+                  !remindMe ? 'bg-primary' : 'translate-x-[100%] bg-white'
                 }`}
               ></div>
             </div>
