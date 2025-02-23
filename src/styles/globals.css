@@ -2,20 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  @apply select-none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.container {
+  @apply p-5 flex flex-col justify-center;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.btn {
+  @apply py-2.5 rounded-full my-3 font-medium bg-primary text-white;
+}
+
+input {
+  @apply focus:outline-none;
+}
+
+.login-input {
+  @apply w-full bg-gray-100 text-primary;
 }
